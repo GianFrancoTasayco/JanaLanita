@@ -1,0 +1,23 @@
+@import './styles/variables.css';
+
+body {
+  margin: 0;
+  padding-top: 70px;
+  font-family: var(--main-font);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+  color: #000000;
+  background: #ffffff;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 50px;
+  }
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

@@ -1,0 +1,248 @@
+/* ========================================
+   CONTENT COMPONENT STYLES
+   ======================================== */
+
+/* ========================================
+   CONTENT SECTION
+   ======================================== */
+.content-section {
+  padding: 60px 0;
+  background: #ffffff;
+  min-height: 100vh;
+}
+
+/* ========================================
+   CONTENT HEADER
+   ======================================== */
+.content-header {
+  text-align: center;
+  margin: 40px 0;
+  padding: 0 20px;
+}
+
+.content-header h2 {
+  font-size: 2.5rem;
+  color: #000000;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.content-header p {
+  font-size: 1.2rem;
+  color: #000000;
+  margin-bottom: 30px;
+}
+
+/* ========================================
+   AMIGURUMIS GRID
+   ======================================== */
+.amigurumis-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  padding: 0 20px;
+}
+
+/* ========================================
+   AMIGURUMI CARD
+   ======================================== */
+.amigurumi-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(235, 68, 91, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.amigurumi-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* ========================================
+   IMAGE CONTAINER
+   ======================================== */
+.image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.amigurumi-image {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.amigurumi-card:hover .amigurumi-image {
+  transform: scale(1.05);
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(transparent, rgba(0,0,0,0.8));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 20px;
+}
+
+.amigurumi-card:hover .image-overlay {
+  opacity: 1;
+}
+
+.image-overlay h3 {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 0;
+}
+
+/* ========================================
+   CARD CONTENT
+   ======================================== */
+.card-content {
+  padding: 15px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.card-header h4 {
+  font-size: 1.3rem;
+  color: #000000;
+  margin: 0;
+  font-weight: 600;
+}
+
+.fecha {
+  font-size: 0.7rem;
+  color: #000000;
+  background: #f1e7c5;
+  padding: 3px 8px;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.descripcion {
+  font-size: 0.9rem;
+  color: #000000;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* ========================================
+   HASHTAGS
+   ======================================== */
+.hashtags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 10px;
+  justify-content: center;
+}
+
+.hashtag {
+  background: linear-gradient(135deg, #eb445b, #f5938b);
+  color: white;
+  padding: 4px 10px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: transform 0.2s ease;
+}
+
+.hashtag:hover {
+  transform: scale(1.05);
+}
+
+/* ========================================
+   CONTENT FOOTER
+   ======================================== */
+.content-footer {
+  text-align: center;
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(235, 68, 91, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.content-footer p {
+  font-size: 1.2rem;
+  color: #000000;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.contacto-info {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.contacto-info span {
+  background: transparent;
+  color: #000000;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN - MOBILE
+   ======================================== */
+@media (max-width: 768px) {
+  .content-section {
+    padding: 30px 0;
+  }
+  
+  .content-header {
+    width: 90%;
+    margin: 20px auto;
+    padding: 0;
+  }
+  
+  .content-header h2 {
+    font-size: 2rem;
+  }
+  
+  .amigurumis-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    width: 90%;
+    margin: 0 auto 20px;
+    padding: 0;
+  }
+  
+  .card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .contacto-info {
+    flex-direction: column;
+    gap: 15px;
+  }
+}

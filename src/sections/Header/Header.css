@@ -1,0 +1,189 @@
+/* ========================================
+   HEADER COMPONENT STYLES
+   ======================================== */
+
+/* Importar variables globales */
+@import '../../styles/variables.css';
+
+/* ========================================
+   HEADER PRINCIPAL
+   ======================================== */
+.header {
+  background: #ffffff;
+  padding: 10px 0;
+  color: #000000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* ========================================
+   CONTENEDOR Y LAYOUT
+   ======================================== */
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+/* ========================================
+   LOGO SECTION
+   ======================================== */
+.logo-section {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.logo-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.logo-image:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ========================================
+   HEADER RIGHT SECTION
+   ======================================== */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+/* ========================================
+   QUOTE SECTION
+   ======================================== */
+.header-quote {
+  text-align: right;
+}
+
+.quote-text {
+  font-size: 1.2rem;
+  font-weight: 300;
+  font-style: italic;
+  margin: 0;
+  color: #000000;
+  line-height: 1.4;
+  max-width: 300px;
+}
+
+/* ========================================
+   WHATSAPP BUTTON
+   ======================================== */
+.whatsapp-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+.whatsapp-button:hover {
+  transform: translateY(-2px) scale(1.1);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+  background: linear-gradient(135deg, #128C7E, #25D366);
+}
+
+.whatsapp-icon {
+  width: 40px;
+  height: 24px;
+  object-fit: contain;
+  border-radius: 50%;
+  filter: brightness(0) invert(1);
+}
+
+/* ========================================
+   RESPONSIVE DESIGN - MOBILE
+   ======================================== */
+@media (max-width: 768px) {
+  .header {
+    padding: 5px 0;
+  }
+  
+  .header-container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  
+  .header-content {
+    flex-direction: row;
+    gap: 15px;
+    text-align: left;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header-right {
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+  }
+  
+  .header-quote {
+    text-align: right;
+    display: none; /* Ocultar frase en mobile */
+  }
+  
+  .quote-text {
+    font-size: 0.9rem;
+    max-width: 150px;
+  }
+  
+  .logo-text {
+    font-size: 1.5rem;
+  }
+  
+  .logo-image {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .whatsapp-button {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .whatsapp-icon {
+    width: 24px;
+    height: 16px;
+  }
+}

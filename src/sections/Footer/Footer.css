@@ -1,0 +1,232 @@
+/* ========================================
+   FOOTER COMPONENT STYLES
+   ======================================== */
+
+/* ========================================
+   FOOTER PRINCIPAL
+   ======================================== */
+.footer {
+  background: #eb445b;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Patrón de fondo sutil */
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 10% 20%, rgba(102, 126, 234, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 90% 80%, rgba(118, 75, 162, 0.1) 0%, transparent 50%);
+  opacity: 0.5;
+}
+
+/* ========================================
+   CONTAINER
+   ======================================== */
+.footer .container {
+  padding: 50px 0;
+}
+ 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  padding: 0 20px;
+}
+
+/* ========================================
+   FOOTER CONTENT
+   ======================================== */
+.footer-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  text-align: center;
+  flex: 0 1 auto;
+  min-width: 200px;
+  max-width: 250px;
+}
+
+/* ========================================
+   TIPOGRAFÍA
+   ======================================== */
+.footer-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+}
+
+.footer-subtitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+
+.footer-description {
+  line-height: 1.7;
+  color: #ffffff;
+  margin-bottom: 25px;
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+
+/* ========================================
+   INFORMACIÓN DE CONTACTO
+   ======================================== */
+.contact-info p {
+  margin-bottom: 15px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 1.1rem;
+  font-weight: 300;
+  transition: color 0.3s ease;
+}
+
+.contact-info p:hover {
+  color: #f0f0f0;
+}
+
+/* ========================================
+   REDES SOCIALES
+   ======================================== */
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.social-link {
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  padding: 10px 0;
+  font-size: 1.1rem;
+  font-weight: 300;
+  position: relative;
+}
+
+.social-link:hover {
+  color: #f0f0f0;
+  transform: translateX(5px);
+}
+
+.social-link::before {
+  content: '';
+  position: absolute;
+  left: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  transition: width 0.3s ease;
+}
+
+.social-link:hover::before {
+  width: 10px;
+}
+
+/* ========================================
+   FOOTER BOTTOM (COPYRIGHT)
+   ======================================== */
+.footer-bottom {
+  background: #ffffff;
+  margin-top: 0;
+  padding: 30px 0;
+  text-align: center;
+  position: relative;
+  width: 100%;
+}
+
+.footer-bottom .container {
+  max-width: 100%;
+  padding: 0 20px;
+  margin: 0;
+}
+
+.footer-bottom::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #667eea, transparent);
+}
+
+.copyright {
+  color: #000000;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN - MOBILE
+   ======================================== */
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 0 0;
+  }
+  
+  .footer-bottom {
+    padding: 20px 0;
+  }
+  
+  .container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  
+  .footer-content {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .footer-section {
+    text-align: center;
+    flex: none;
+  }
+  
+  .social-links {
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .footer-title {
+    font-size: 1.5rem;
+  }
+  
+  .footer-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .footer-description {
+    font-size: 1rem;
+  }
+}
